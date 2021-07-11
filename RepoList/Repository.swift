@@ -7,16 +7,21 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-class Repository: Mappable {
-	var name = ""
-	var language = ""
+class Repository: Object, Mappable {
+	@objc dynamic var name = ""
+	@objc dynamic var language = ""
 	
-	required init?(map: Map) {
+	override init() {
 		
 	}
 	
-	func mapping(map: Map) {
+	required init?(map: ObjectMapper.Map) {
+		
+	}
+	
+	func mapping(map: ObjectMapper.Map) {
 		name <- map["name"]
 		language <- map["language"]
 	}

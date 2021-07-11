@@ -7,20 +7,22 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-class User: Mappable {
-	var login = ""
-	var avatar = ""
-	
-	init() {
+class User: Object, Mappable {
+	@objc dynamic var login = ""
+	@objc dynamic var avatar = ""
+	let repositories = List<Repository>()
+
+	override init() {
 		
 	}
 	
-	required init?(map: Map) {
+	required init?(map: ObjectMapper.Map) {
 		
 	}
 	
-	func mapping(map: Map) {
+	func mapping(map: ObjectMapper.Map) {
 		login <- map["login"]
 		avatar <- map["avatar_url"]
 	}

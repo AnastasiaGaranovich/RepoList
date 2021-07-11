@@ -15,7 +15,14 @@ class MainViewController: UITableViewController {
 		super.viewDidLoad()
 		Network.getUsers {
 			error, users in
+			if let error = error {
+				print("Network error \(error)")
+				self.users = RealmDB.getUsers()
+				self.tableView.reloadData()
+				return
+			}
 			self.users = users
+			RealmDB.addUsers(users: self.users)
 			self.tableView.reloadData()
 		}
 	}
