@@ -38,5 +38,9 @@ class MainViewController: UITableViewController {
 		viewController.user = user
 		navigationController?.pushViewController(viewController, animated: true)
 	}
+	
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 80
+	}
 }
 
