@@ -12,6 +12,10 @@ class User: Mappable {
 	var login = ""
 	var avatar = ""
 	
+	init() {
+		
+	}
+	
 	required init?(map: Map) {
 		
 	}

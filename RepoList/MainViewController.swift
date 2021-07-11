@@ -10,7 +10,7 @@ import UIKit
 class MainViewController: UITableViewController {
 	
 	var users = [User]()
-
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		Network.getUsers {
@@ -31,8 +31,12 @@ class MainViewController: UITableViewController {
 		return cell.setUser(user: users[indexPath.row])
 	}
 	
-//	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//		<#code#>
-//	}
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let user = users[indexPath.row]
+		let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+		let viewController = mainStoryboard.instantiateViewController(withIdentifier: "UserDetailsViewController") as! UserDetailsViewController
+		viewController.user = user
+		navigationController?.pushViewController(viewController, animated: true)
+	}
 }
 
