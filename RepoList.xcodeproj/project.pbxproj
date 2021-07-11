@@ -77,22 +77,46 @@
 		1BB8D1A02699B5AC0039A747 /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
+				1BB8D1C7269B1A820039A747 /* Controllers */,
+				1BB8D1C6269B1A450039A747 /* Storyboards */,
+				1BB8D1C5269B1A250039A747 /* Model */,
 				1BB8D1A12699B5AC0039A747 /* AppDelegate.swift */,
 				1BB8D1A32699B5AC0039A747 /* SceneDelegate.swift */,
-				1BB8D1A52699B5AC0039A747 /* MainViewController.swift */,
-				1BB8D1B52699B8A70039A747 /* UserDetailsViewController.swift */,
-				1BB8D1A72699B5AC0039A747 /* Main.storyboard */,
 				1BB8D1AA2699B5AE0039A747 /* Assets.xcassets */,
-				1BB8D1AC2699B5AE0039A747 /* LaunchScreen.storyboard */,
 				1BB8D1AF2699B5AE0039A747 /* Info.plist */,
-				1BB8D1B72699FACF0039A747 /* User.swift */,
-				1BB8D1B92699FC800039A747 /* Network.swift */,
-				1BB8D1BB269A080D0039A747 /* MainCell.swift */,
-				1BB8D1BD269A0B060039A747 /* Repository.swift */,
-				1BB8D1C1269AE4640039A747 /* DetailsCell.swift */,
-				1BB8D1C3269B10860039A747 /* RealmDB.swift */,
 			);
 			path = RepoList;
+			sourceTree = "<group>";
+		};
+		1BB8D1C5269B1A250039A747 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1BB8D1C3269B10860039A747 /* RealmDB.swift */,
+				1BB8D1BD269A0B060039A747 /* Repository.swift */,
+				1BB8D1B92699FC800039A747 /* Network.swift */,
+				1BB8D1B72699FACF0039A747 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1BB8D1C6269B1A450039A747 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1BB8D1AC2699B5AE0039A747 /* LaunchScreen.storyboard */,
+				1BB8D1A72699B5AC0039A747 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1BB8D1C7269B1A820039A747 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1BB8D1C1269AE4640039A747 /* DetailsCell.swift */,
+				1BB8D1BB269A080D0039A747 /* MainCell.swift */,
+				1BB8D1B52699B8A70039A747 /* UserDetailsViewController.swift */,
+				1BB8D1A52699B5AC0039A747 /* MainViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		6114C48EAFCB34F3C8B91DE6 /* Frameworks */ = {
