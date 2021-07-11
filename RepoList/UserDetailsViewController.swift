@@ -9,7 +9,7 @@ import UIKit
 
 class UserDetailsViewController: UITableViewController {
 	var user = User()
-	var repositories = [Repository]()
+	private var repositories = [Repository]()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

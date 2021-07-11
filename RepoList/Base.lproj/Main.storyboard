@@ -40,18 +40,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iht-7b-GK1">
-                                            <rect key="frame" x="40" y="2" width="40" height="40"/>
+                                            <rect key="frame" x="40" y="-18.5" width="80" height="80.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="qFc-Oq-uac"/>
-                                                <constraint firstAttribute="height" constant="40" id="vgl-SR-0Y2"/>
+                                                <constraint firstAttribute="width" constant="80" id="qFc-Oq-uac"/>
+                                                <constraint firstAttribute="height" constant="80" id="vgl-SR-0Y2"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuJ-T9-CMz">
-                                            <rect key="frame" x="90" y="11.5" width="200" height="21"/>
+                                            <rect key="frame" x="130" y="8.5" width="200" height="26.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="200" id="P1m-Gy-9YK"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -89,24 +94,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DetailsCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsCell" id="cyN-U6-f9R" customClass="DetailsCell" customModule="RepoList" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DetailsCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DetailsCell" id="cyN-U6-f9R" customClass="DetailsCell" customModule="RepoList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cyN-U6-f9R" id="5A6-r5-AaS">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSk-ZT-vM9">
-                                            <rect key="frame" x="20" y="11.5" width="200" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSk-ZT-vM9">
+                                            <rect key="frame" x="20" y="10" width="250" height="24"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="200" id="hKR-eF-6oI"/>
+                                                <constraint firstAttribute="width" constant="250" id="hKR-eF-6oI"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6Y-W2-wO2">
-                                            <rect key="frame" x="314" y="11.5" width="100" height="21"/>
+                                            <rect key="frame" x="299" y="11.5" width="100" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="H1C-l2-4qe"/>
                                             </constraints>
@@ -119,7 +124,7 @@
                                         <constraint firstItem="C6Y-W2-wO2" firstAttribute="centerY" secondItem="5A6-r5-AaS" secondAttribute="centerY" id="0Ba-bK-lzT"/>
                                         <constraint firstItem="TSk-ZT-vM9" firstAttribute="centerY" secondItem="5A6-r5-AaS" secondAttribute="centerY" id="46e-e8-BdY"/>
                                         <constraint firstItem="TSk-ZT-vM9" firstAttribute="leading" secondItem="5A6-r5-AaS" secondAttribute="leadingMargin" id="seN-SW-4JO"/>
-                                        <constraint firstAttribute="trailing" secondItem="C6Y-W2-wO2" secondAttribute="trailing" id="ute-q6-yhl"/>
+                                        <constraint firstAttribute="trailing" secondItem="C6Y-W2-wO2" secondAttribute="trailing" constant="15" id="ute-q6-yhl"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -137,7 +142,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2L-0t-UfQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="567" y="62"/>
+            <point key="canvasLocation" x="568" y="62"/>
         </scene>
     </scenes>
     <resources>
